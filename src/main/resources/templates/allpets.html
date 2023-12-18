@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All pets</title>
+</head>
+<body>
+
+<dev th:each="pet : ${pets}">
+    <a th:href="@{/pets/{id}(id=${pet.getId()})}" th:text="${pet.getName}">pet</a>
+</dev>
+
+</body>
+</html>
